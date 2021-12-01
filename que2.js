@@ -4,4 +4,5 @@ let str = 'man6198u.gupta@gm.ai.l.com';
 
 let ans = regex.exec(str);
 console.log(ans);
+
 console.log(regex.test(str));
