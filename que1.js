@@ -5,9 +5,9 @@
 // Character. ( period, dot or full stop) provided that it is not the first or last character 
 // and it will not come one after the other.
 
- let regex = /^[^\.][a-z A-Z 0-9 \! \# \$ \- \% \& \' \* \+ \/ \= \? \^ \_ \` \{ \| \} \~]+(?!.*?\.\.)[^\.]$/
+ let regex = /^[^\.](?!.?\.\.)[a-z A-Z 0-9 \! \# \$ \- \% \& \' \* \+ \/ \= \? \^ \_ \` \{ \| \} \~ \.]+[^\.]$/
 
-let str = 'adasdfs..d+*f-sdf'
+let str = 'adasd{}|fs.d+*f-s.d.f'
 
 let ans = regex.exec(str)
 console.log(ans);
