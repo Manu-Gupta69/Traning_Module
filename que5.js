@@ -32,12 +32,13 @@ return {mysettimeout , clearsettimeout}
 }
 
 let timeout1 = createsettimeout();
+let timeout2 = createsettimeout();
 timeout1.mysettimeout(()=>{
     console.log('running after 2 sec')
 } , 2000)
-let id = timeout1.mysettimeout(()=>{
-    console.log('running after 5 sec')
-} , 5000)
+let id = timeout2.mysettimeout(()=>{
+    console.log('running after 2 sec timeout2')
+} , 2000)
 console.log('sync code is running')
 
 //timeout1.clearsettimeout(id)
