@@ -12,3 +12,7 @@ function sleep(x){
 sleep(3000).then(res=>{
     console.log(res);
 });
+// console.log('running sync')
+// for(let i=0; i<5 ;i++){
+//     console.log(i);
+// }
