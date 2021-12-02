@@ -5,7 +5,7 @@
 
 let inputarr = ['first', 'Second', 'thiRd', 4, false, 'true'];
 let idx  = 0;
-let outputarr = [];
+let outputmap = {};
 
 function validateString(input, callback) {
   setTimeout(function () {
@@ -23,15 +23,14 @@ if(inputarr.length){
      validateString(inputarr[0], callback);
 }
 function callback(err , res){
+            let bool = err ? false : true;
             idx +=1;
             if(idx == inputarr.length) {
-                if(!err) outputarr.push(inputarr[idx-1])
-                console.log(outputarr)
+                 outputmap[inputarr[idx-1]] = bool;
+                console.log(outputmap)
                 return
             }
-            if(!err){
-                outputarr.push(inputarr[idx-1]);
-            }
+                outputmap[inputarr[idx-1]] = bool;
         return validateString(inputarr[idx] , callback);
 }
 
