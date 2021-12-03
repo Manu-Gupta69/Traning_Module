@@ -6,7 +6,7 @@ function factorial(n){
    if(n <= 1) return 1;
     return n * factorial(n-1);
 }
-ans =  factorial(number);
+ let ans = factorial(number);
 return ans;
 }
 

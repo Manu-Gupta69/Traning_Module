@@ -1,7 +1,7 @@
 //Write a JavaScript program to test if the first character of a string is uppercase or not,
 //if not then set the first character to uppercase
 
-let testStr = "  abcs";
+let testStr = "";
 
 function makeUppercase(str) {
   let finalRes = str.split("");
