@@ -27,7 +27,8 @@ function callback(err , res){
             idx +=1;
             if(idx == inputarr.length) {
                  outputmap[inputarr[idx-1]] = bool;
-               return outputmap;
+                 console.log(outputmap);
+                 return;
             }
                 outputmap[inputarr[idx-1]] = bool;
         validateString(inputarr[idx] , callback);
