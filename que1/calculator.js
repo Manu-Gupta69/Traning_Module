@@ -1,11 +1,13 @@
-const readline = require("readline");
-const Calculator  = require('./calculatormodel');
+// eslint-disable-next-line linebreak-style
+const readline = require('readline');
+const Calculator = require('./calculatormodel');
+
 let map = {
-    '+'  : 'addition',
-    '-'  : 'substraction',
-    '/'  : 'division',
-    '*'  : 'multiplication',
-}
+  '+': 'addition',
+  '-': 'substraction',
+  '/': 'division',
+  '*': 'multiplication',
+};
 
 const rl = readline.createInterface({
   input: process.stdin,
@@ -14,7 +16,7 @@ const rl = readline.createInterface({
 
 const enterVal1 = () => {
   return new Promise((resolve, reject) => {
-    rl.question("Enter value 1 ", (val1) => {
+    rl.question('Enter value 1 ', (val1) => {
       resolve(val1);
     });
   });
@@ -22,17 +24,16 @@ const enterVal1 = () => {
 
 const enterVal2 = () => {
   return new Promise((resolve, reject) => {
-    rl.question("Enter value 2 ", (val2) => {
+    rl.question('Enter value 2 ', (val2) => {
       resolve(val2);
     });
   });
 };
 const enterOperation = () => {
-  return new Promise((resolve, reject) => {
-    rl.question("Enter operation (+,-,/,*) ", (op) => {
+  return new Promise((resolve, reject) => rl.question('Enter operation (+,-,/,*) ', (op) => {
       resolve(op);
     });
-  });
+  );
 };
 
 exports.main = async () => {
@@ -44,4 +45,3 @@ exports.main = async () => {
   cal[perform](parseInt(val1), parseInt(val2));
   rl.close();
 };
-

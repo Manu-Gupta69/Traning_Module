@@ -1,8 +1,7 @@
-const fs = require("fs/promises");
+const fs = require('fs/promises');
 
 exports.getdata = (path) => {
-  return new Promise((resolve, reject) => {
-    fs.readFile(path)
+  return new Promise((resolve, reject) => fs.readFile(path)
       .then((data) => {
         let jsdata = JSON.parse(data);
          resolve(jsdata);
@@ -11,5 +10,5 @@ exports.getdata = (path) => {
         console.log(err);
         reject(err);
       });
-  });
+  );
 };
