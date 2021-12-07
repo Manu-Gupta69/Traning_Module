@@ -29,12 +29,8 @@ const enterVal2 = () => {
     });
   });
 };
-const enterOperation = () => {
-  return new Promise((resolve, reject) => rl.question('Enter operation (+,-,/,*) ', (op) => {
-      resolve(op);
-    });
-  );
-};
+const enterOperation = () => new Promise((resolve, reject) => rl.question('Enter operation (+,-,/,*) ', (op) => resolve(op)));
+
 
 exports.main = async () => {
   let val1 = await enterVal1();

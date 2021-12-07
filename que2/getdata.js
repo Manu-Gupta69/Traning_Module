@@ -9,6 +9,7 @@ exports.getdata = (path) => {
       .catch((err) => {
         console.log(err);
         reject(err);
-      });
-  );
+      }
+      )
+);
 };

@@ -6,6 +6,7 @@ exports.writefile = (path, filecontent) => {
   fs.writeFile(path, jsoncontent)
     .then(() => {
       console.log('writing successfull');
+      return;
     })
     .catch((err) => {
       console.log(err);
