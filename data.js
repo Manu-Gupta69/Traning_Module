@@ -13,7 +13,7 @@ exports.getData = async (urlendpoint) => {
       console.log(filename)
     if (response.status === 200) {
       const data = response.data
-      const currpath = path.join(__dirname);
+      const currpath = path.join(__dirname , 'output');
       const savepath =  `${currpath}\\${Date.now()}_${filename}.txt`
      //console.log(savepath)
       writefile(savepath, data);
