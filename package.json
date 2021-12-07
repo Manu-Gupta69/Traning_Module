@@ -36,5 +36,8 @@
     "hooks": {
       "pre-commit": "eslint ."
     }
+  },
+  "dependencies": {
+    "axios": "^0.24.0"
   }
 }
