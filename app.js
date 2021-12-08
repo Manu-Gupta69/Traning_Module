@@ -1,4 +1,4 @@
 const {getData} = require('./data');
-getData('posts');
+getData('pos');
 
 
