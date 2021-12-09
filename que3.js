@@ -7,8 +7,8 @@ function Calculator() {
   this.val1 = null;
   this.val2 = null;
   this.read = function () {
-    let values = window.prompt("Enter two values");
-    let valueArgs = values.split(" ");
+    let values = window.prompt('Enter two values');
+    let valueArgs = values.split(' ');
     this.val1 = parseInt(valueArgs[0]);
     this.val2 = parseInt(valueArgs[1]);
   };

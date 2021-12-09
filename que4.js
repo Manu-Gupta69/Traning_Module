@@ -6,11 +6,11 @@ let testobj = {
   b: {
     c: [5, 6],
   },
-  d: "somename",
+  d: 'somename',
   e: false,
-  f:function test(){
-      console.log('idk')
-  }
+  f: function test() {
+    console.log('idk');
+  },
 };
 
 function createDeepClone(obj) {
@@ -20,7 +20,7 @@ function createDeepClone(obj) {
       dummyobj[key] = object[key];
       if (Array.isArray(object[key])) {
         dummyobj[key] = [...object[key]];
-      } else if (typeof object[key] == "object") {
+      } else if (typeof object[key] == 'object') {
         dummyobj[key] = deepClone(object[key]);
       }
     }
@@ -30,8 +30,8 @@ function createDeepClone(obj) {
 }
 let ans = createDeepClone(testobj);
 
-console.log('ans' ,ans);
+console.log('ans', ans);
 ans.b.c[0] = 10;
-console.log('ans' ,ans);
-console.log('testobj' , testobj);
+console.log('ans', ans);
+console.log('testobj', testobj);
 ans.f();
