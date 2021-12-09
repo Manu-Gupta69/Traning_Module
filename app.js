@@ -1,4 +1,2 @@
-const {getData} = require('./data');
+const { getData } = require('./data');
 getData('pos');
-
-
