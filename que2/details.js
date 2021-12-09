@@ -68,7 +68,7 @@ exports.setdetails = async () => {
     const currpath = path.join(__dirname);
     const filename = `${currpath}\\${Date.now()}_response.json`;
     writefile(filename, finaldata);
-  } catch(err) {
-     console.log(err);
+  } catch (err) {
+    console.log(err);
   }
 };
